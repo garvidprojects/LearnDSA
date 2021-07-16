@@ -1,0 +1,19 @@
+public void checkPalindrome(int number){
+
+	int rev = 0 , temp = number;
+		while(temp > 0){
+			int rem = temp % 10;
+			rev = (rev*10) + rem;
+			temp = temp / 10;
+		}
+		if(number == rev){
+			System.out.println("It is a palindrome number");
+		}else{
+			System.out.println("It is not a palindrome number");
+		}
+	
+	}	
+
+}
+
+Tc : O(n)  :where n is the no of digit.

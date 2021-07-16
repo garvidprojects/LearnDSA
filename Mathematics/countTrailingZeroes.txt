@@ -1,0 +1,35 @@
+public int countTrailingZeroes(int n){
+	if(n <= 4){
+		return 0;
+	}
+	else{
+		int factorial = getFactorial(n);
+		int ld = 0, zeroCount = 0;
+		while(true){
+			ld = n % 10;
+			if(ld == 0){
+				zeroCount++;
+				n = n / 10;
+			}else{
+				break;
+			}
+		}
+		return zeroCount;
+	}
+}
+
+TC : O(n)
+
+static int countTrailingZeros(int n){
+	int res = 0;
+
+	for(int i=5; i<=n; i=i*5)
+	{
+		res = res + (n / i); // mathsCountZeroes
+	}
+
+	return res;
+}
+
+
+100 / 5 + 20 /5 

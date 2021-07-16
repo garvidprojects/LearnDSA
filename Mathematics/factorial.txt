@@ -1,0 +1,26 @@
+public int factorial(int num){
+
+	int mulSum = 1;
+	for(int i = 1 ; i <= num ; i++){
+		mulSum = mulSum * i; 	
+	}
+	return  mulSum;
+}
+
+Tc : O(n)
+
+public int factorial(int num){
+
+	if(num == 0){
+		return 1;
+	}
+	
+	return num * factorial(num-1);
+
+}
+
+tc : T(n) =  T(n-1) + O(1);
+
+So tc = O(n)
+
+Auxiliary space = o(n) 

@@ -1,0 +1,35 @@
+public static int countDigits(int num){
+	int numCount = 0;
+	while(num != 0){
+		
+		num = num / 10;
+		count++;	
+	
+	}
+
+	return count;
+}
+
+public int countDigits(int num){
+
+	if(num == 0){
+		
+		return 0;
+	
+	}
+
+	return 1 + countDigits(num/10);
+
+
+}
+
+
+public int countDigits(int num){
+
+	return Math.floor(log(num)) + 1;
+
+}
+
+TC : o(n)
+
+
